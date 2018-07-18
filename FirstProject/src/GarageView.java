@@ -98,21 +98,22 @@ public class GarageView {
 						+ "To repair a cycle, enter \"cycle\"."); 
 				String vehicleType = sc.nextLine();
 				switch (vehicleType) {
-				case "car":
-				case "Car":
-					garage.removeByVehicle("car");
-					break;
-				case "motorcycle":
-				case "Motorcycle":
-					garage.removeByVehicle("motorcycle");						
-					break;
-				case "cycle":
-				case "Cycle":
-					garage.removeByVehicle("cycle");
-					break;
-				default:
-					System.out.println("This garage does not handle your vehicle. Please choose another one.");
-					break;
+					case "car":
+					case "Car":
+						//garage.removeByVehicle("car");
+						break;
+					case "motorcycle":
+					case "Motorcycle":
+						//garage.removeByVehicle("motorcycle");						
+						break;
+					case "cycle":
+					case "Cycle":
+						//garage.removeByVehicle("cycle");
+						break;
+					default:
+						//System.out.println("This garage does not handle your vehicle. Please choose another one.");
+						break;
+				}
 				break;
 			case 4: 
 				garage.emptyGarage();
