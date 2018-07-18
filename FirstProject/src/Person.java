@@ -10,10 +10,7 @@ public class Person {
 		this.jobTitle = jobTitle;
 	}
 	
-	public String getName() {
-		return name;
-	}
-	
+	@Override
 	public String toString() {
 		return name + " is " + age + " years old and works as a " + jobTitle + ".";
 	}	
