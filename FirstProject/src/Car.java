@@ -1,7 +1,12 @@
 
 public class Car extends Vehicle {
 
-	String engine;
+	int noOfWheels = 4;
+	double price = 3500.50;
+	String fuel = "diesel";
+	String engine = "large";
+	
+	public Car() {}
 	
 	public Car (int noOfWheels, double price, String fuel, int vehicleID, String engine) {
 		this.noOfWheels = noOfWheels;

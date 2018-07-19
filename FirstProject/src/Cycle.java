@@ -1,7 +1,12 @@
 
 public class Cycle extends Vehicle {
 
-	int noOfPedals;
+	int noOfWheels = 2;
+	double price = 5.00;
+	String fuel = "air";
+	int noOfPedals = 2;	
+	
+	public Cycle() {}
 	
 	public Cycle (int noOfWheels, double price, String fuel, int vehicleID, int noOfPedals) {
 		this.noOfWheels = noOfWheels;

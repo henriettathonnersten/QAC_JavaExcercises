@@ -66,21 +66,21 @@ public class GarageView {
 						break;
 					case "type":
 						System.out.println("To remove all cars, enter \"car\". "
-											+ "To remove all motorcycles, enter \"motorcycle\"."
+											+ "To remove all motorcycles, enter \"motorcycle\". "
 											+ "To remove all cycles, enter \"cycle\"."); 
 						String vehicleType = sc.nextLine();
 						switch (vehicleType) {
 						case "car":
 						case "Car":
-							garage.removeByVehicle("car");
+							garage.removeByVehicle(new Car());
 							break;
 						case "motorcycle":
 						case "Motorcycle":
-							garage.removeByVehicle("motorcycle");						
+							garage.removeByVehicle(new Motorcycle());						
 							break;
 						case "cycle":
 						case "Cycle":
-							garage.removeByVehicle("cycle");
+							garage.removeByVehicle(new Cycle());
 							break;
 						default:
 							System.out.println("This garage does not handle your vehicle. Please choose another one.");
@@ -92,26 +92,25 @@ public class GarageView {
 				}									
 				break;
 			case 3:
-				//garage.fixVehicle();
 				System.out.println("To repair a car, enter \"car\". "
-						+ "To repair a motorcycle, enter \"motorcycle\"."
+						+ "To repair a motorcycle, enter \"motorcycle\". "
 						+ "To repair a cycle, enter \"cycle\"."); 
 				String vehicleType = sc.nextLine();
 				switch (vehicleType) {
 					case "car":
 					case "Car":
-						//garage.removeByVehicle("car");
+						garage.fixVehicle(new Car());
 						break;
 					case "motorcycle":
 					case "Motorcycle":
-						//garage.removeByVehicle("motorcycle");						
+						garage.fixVehicle(new Motorcycle());						
 						break;
 					case "cycle":
 					case "Cycle":
-						//garage.removeByVehicle("cycle");
+						garage.fixVehicle(new Cycle());
 						break;
 					default:
-						//System.out.println("This garage does not handle your vehicle. Please choose another one.");
+						System.out.println("This garage cannot fix your vehicle. Please choose another one.");
 						break;
 				}
 				break;

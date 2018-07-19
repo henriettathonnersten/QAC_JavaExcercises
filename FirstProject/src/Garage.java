@@ -22,7 +22,7 @@ public class Garage {
 			total += i.billCalculation();
 		}
 	
-		System.out.println("Thecurrent garage total is £" + total);
+		System.out.println("The current garage total is £" + total);
 	}
 	
 	public void addVehicle(String type, int noOfWheels, double price, String fuel, String engine) {
@@ -47,16 +47,14 @@ public class Garage {
 			if (i.vehicleID == id) {
 				vehicles.remove(i);
 				i = null;
-				//break;
 			}
 		}
 		countVehicles();
 	}
 	
-	public void removeByVehicle(String type) {
-		if (type == "car") {			
-			ArrayList<Car> carsToRemove = new ArrayList<Car>();
-			
+	public void removeByVehicle(Object o) {
+		if (o instanceof Car) {			
+			ArrayList<Car> carsToRemove = new ArrayList<Car>();			
 			for (Vehicle i : vehicles) {
 				if (i instanceof Car) {
 					carsToRemove.add((Car) i);
@@ -64,12 +62,11 @@ public class Garage {
 			}
 			vehicles.removeAll(carsToRemove);
 		}
-		else if (type == "motorcycle") {
+		else if (o instanceof Motorcycle) {
 			ArrayList<Motorcycle> motorcyclesToRemove = new ArrayList<Motorcycle>();
 			for (Vehicle i : vehicles) {
 				if (i instanceof Motorcycle) {
 					motorcyclesToRemove.add((Motorcycle) i);
-
 				}
 			}
 			vehicles.removeAll(motorcyclesToRemove);
@@ -86,7 +83,19 @@ public class Garage {
 		countVehicles();
 	}
 	
-	public fixVehicle()
+	public void fixVehicle(Object o) {
+		double price = 0.00;
+		if (o instanceof Car) {			
+			price = ((Car) o).billCalculation();
+		}
+		else if (o instanceof Motorcycle) {
+			price = ((Motorcycle) o).billCalculation();
+		}
+		else {
+			price = ((Cycle) o).billCalculation();
+		}
+		System.out.println("Standard cost for fixing your vehicle: £s" + price);
+	}
 	
 	public void emptyGarage() {
 		vehicles.removeAll(vehicles);

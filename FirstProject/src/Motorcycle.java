@@ -1,7 +1,12 @@
 
 public class Motorcycle extends Vehicle {
 
-	String engine;
+	int noOfWheels = 2;
+	double price = 2500.00;
+	String fuel = "petrol";
+	String engine = "large";
+	
+	public Motorcycle() {}
 	
 	public Motorcycle (int noOfWheels, double price, String fuel, int vehicleID, String engine) {
 		this.noOfWheels = noOfWheels;
