@@ -1,0 +1,5 @@
+Alice|52|manager
+Beatrice|33|cashier
+Cecily|26|customer service
+Diana|50|phone operator
+Erica|32|manager
