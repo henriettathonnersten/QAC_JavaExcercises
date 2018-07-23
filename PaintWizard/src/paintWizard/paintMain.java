@@ -1,14 +1,11 @@
 package paintWizard;
 
-import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class paintMain {
 
 	public static void main(String[] args) {	
-		
-				
+						
 		Scanner sc = new Scanner(System.in);
 		
 		System.out.print("Enter the width of the room: ");
@@ -25,11 +22,9 @@ public class paintMain {
 		double wallArea = width * depth * height;
 		
 		PaintCalculator calculator = new PaintCalculator();
+		System.out.println(calculator.leastWasteCheck(wallArea) + " wastes least paint.");
+		System.out.println(calculator.cheapestCheck(wallArea) + " is the cheapest option.");
 		
-		calculator.leastWasteCheck(wallArea);
-		
-		
-
 	}
 
 }

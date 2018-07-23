@@ -56,7 +56,7 @@ public class Paint {
 		if (tinsUsed % 2 > 0)
 			tinsNeeded = (int)Math.ceil(tinsUsed);
 		else
-			tinsNeeded = (int)Math.floor(tinsUsed);
+			tinsNeeded = (int)tinsUsed;
 
 		return tinsNeeded;
 	} 

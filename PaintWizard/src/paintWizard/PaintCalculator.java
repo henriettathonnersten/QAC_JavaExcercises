@@ -14,32 +14,47 @@ public class PaintCalculator {
 	
 	
 	public PaintCalculator() {
+		paints.addAll(Arrays.asList(cheapo, average, duluxourous));						
+	}
+	
+	public String leastWasteCheck(double wallArea) { //Work out which one wastes the least.
 		
-		paints.addAll(Arrays.asList(cheapo, average, duluxourous));
-		
-		//Work out which one wastes the least.
-		
-		public String leastWasteCheck(double wallArea) { //wallArea
+		double leastWasteLitres = 1000.00;
+		int leastWaster = -1;
 		
 		for (int i = 0; i < paints.size(); i++) {
 			int noOfTinsNeeded = paints.get(i).getNoOfTins(wallArea); 
 			waste[i] = paints.get(i).getWaste(noOfTinsNeeded, wallArea);
-			System.out.println(i + " wasted " + waste[i] + " litres.");
 		} 
-				
-		double leastWasteLitres = 1000.00;
-		int leastWaster = -1;
-				
-		for (int i = 0; i < paints.size(); i++) {
-			if (waste[i] < leastWasteLitres)
-				leastWaster = i;
-		}
-		System.out.println(leastWaster + " wastes the least paint.");
-		
-		return paints.get(leastWaster).getName();
-		}
-		//Work out which is the cheapest paint brand to buy for any room.
 						
+		for (int i = 0; i < paints.size(); i++) {
+			if (waste[i] < leastWasteLitres) {
+				leastWaster = i;
+				leastWasteLitres = waste[i]; 
+			}
+		}
+		
+		return paints.get(leastWaster).getName();		
+	}
+	
+	public String cheapestCheck(double wallArea) { 
+		
+		double smallestCost = 1000.00;
+		int cheapestPaint = -1;
+		
+		for (int i = 0; i < paints.size(); i++) { 
+			int noOfTinsNeeded = paints.get(i).getNoOfTins(wallArea); 
+			paintCost[i] = noOfTinsNeeded * paints.get(i).getCost();
+		} 
+						
+		for (int i = 0; i < paints.size(); i++) { 
+			if (paintCost[i] < smallestCost) {
+				cheapestPaint = i;
+				smallestCost = paintCost[i]; 
+			}
+		}
+		
+		return paints.get(cheapestPaint).getName();	
 	}
 
 }

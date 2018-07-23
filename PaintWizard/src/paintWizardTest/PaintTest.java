@@ -1,12 +1,10 @@
 package paintWizardTest;
 
 import static org.junit.Assert.*;
-
 import org.junit.Test;
-
 import paintWizard.Paint;
 
-public class PaintWizardTest {
+public class PaintTest {
 	
 	Paint paint = new Paint("CheapPaint", 10, 12.53, 50);
 		
@@ -78,16 +76,6 @@ public class PaintWizardTest {
 		paint.setContent(20);
 		paint.setCoverPerLitre(10);
 		assertEquals("The actual amount of waste does not match the expected waste", 10, paint.getWaste(2, 300), 0);
-	}
-	
-	@Test
-	public void getLeastWaste() {
-		
-	}
-	
-	@Test
-	public void getCheapestPaint() {
-		
 	}
 
 }
