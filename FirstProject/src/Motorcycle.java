@@ -1,4 +1,5 @@
 
+
 public class Motorcycle extends Vehicle {
 
 	int noOfWheels = 2;

@@ -1,5 +1,8 @@
+
+
 import java.util.ArrayList;
 import java.util.Arrays;
+
 
 public class Garage {
 
@@ -94,7 +97,7 @@ public class Garage {
 		else {
 			price = ((Cycle) o).billCalculation();
 		}
-		System.out.println("Standard cost for fixing your vehicle: £s" + price);
+		System.out.println("Standard cost for fixing your vehicle: £" + price);
 	}
 	
 	public void emptyGarage() {

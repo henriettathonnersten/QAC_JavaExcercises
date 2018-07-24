@@ -1,4 +1,5 @@
 
+
 public class Cycle extends Vehicle {
 
 	int noOfWheels = 2;

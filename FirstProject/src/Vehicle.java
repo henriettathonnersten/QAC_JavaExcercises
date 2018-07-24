@@ -1,4 +1,6 @@
 
+
+
 public abstract class Vehicle {
 	//static int vehicleID;
 	int noOfWheels;
